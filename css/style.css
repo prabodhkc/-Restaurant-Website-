@@ -1,3 +1,4 @@
+/* Home Page */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -64,4 +65,53 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+/* Menu page */
+.menu {
+    padding: 40px 20px;
+    text-align: center;
+}
 
+.menu h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.menu p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: black;
+    color: white;
+
+}
+
+th {
+    background: black;
+    font-size: 18px;
+}
+
+td {
+    font-size: 16px;
+}
+
+/*Gallery Section */
+
+.gallery{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.gallery p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: white;
+}
