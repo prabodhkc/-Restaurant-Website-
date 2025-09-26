@@ -5,6 +5,13 @@ body {
     background-color: black;
     color: white;
 }
+.logo img {
+    height: 60px;
+    width: auto;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
 
 header {
     background: black;
@@ -105,18 +112,53 @@ table {
     margin: 0 auto;
     border-collapse: collapse;
     width: 80%;
-    background: black;
-    color: white;
-
 }
 
-th {
-    background: black;
-    font-size: 18px;
+th, td {
+    border: 2px black;
+    padding: 12px;
+    text-align: left;
+}
+
+th{
+    font-weight: bold;
+    background-color: white;
+    color: black;
 }
 
 td {
-    font-size: 16px;
+    background-color: grey;
+    color: white;
+}
+
+
+
+/* About page */
+
+.about {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.about-img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
 }
 
 /*Gallery Section */
@@ -153,5 +195,43 @@ td {
 }
 
 .gallery-grid img:hover{
-    transform: scale(1.05);
+    transform:
+     scale(1.05);
+}
+
+/* Contact page */
+
+.contact{
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background: red;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover{
+    background: blue;
 }
