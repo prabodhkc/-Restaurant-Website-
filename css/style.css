@@ -114,6 +114,71 @@ table {
     width: 80%;
 }
 
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.menu-item {
+    background: black;
+    padding:20px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart :hover {
+    background: darkred;
+}
+
+.cart {
+    background: black;
+    color: white;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    padding:0;
+    margin-bottom: 20px;
+}
+
+#cart-items li {
+    margin: 10px 0;
+}
+
+#clear-cart {
+    background: grey;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clear-cart:hover {
+    background: darkgrey;
+}
+
 th, td {
     border: 2px black;
     padding: 12px;
