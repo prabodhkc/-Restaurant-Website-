@@ -8,14 +8,30 @@
     </head>
     <body>
         <header>
-            <h1>KC's Restaurant </h1>
-            <nav>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="KC’s Kitchen Logo">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            <nav id="nav-links">
                 <a href="index.html">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </header>
+    
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+    
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
 
         <section class="contact">
             <h2> Contact US</h2>

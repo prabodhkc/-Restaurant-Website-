@@ -10,7 +10,13 @@
 
         <header>
             <h1>KC's Restaurant</h1>
-            <nav>
+            <div class="hamburger" id="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <nav id="nav-links">
                 <a href="index.html">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="about.html">About</a>
@@ -18,51 +24,75 @@
             </nav>
         </header>
 
-        <section class="page-hero menu-hero">
+        <section class="page-hero ">
             <div class="hero-text">
             <h2>Our Menu</h2>
             <p>Crafted with passion, guided by seasonality, inspired by excellence.</p>
             </div>
-        </section>
+        
 
-        <section class="menu">
+          <div  class="menu-overlay">
+            <p>Click add to cart to build your order. </p>
+
+            <div class="cart-icon">🛒</div>
+
+
             <table>
               <tr>
                 <th>Item</th>
                 <th>Price</th>
+                <th></th>
               </tr>
-              <tr>
+        
+              <tr data-name="Seasonal Five Course Experience" data-price="125">
                 <td>Seasonal Five Course Experience</td>
                 <td>$125 per guest</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
               </tr>
-              <tr>
+        
+              <tr data-name="Miso Glazed Black Cod" data-price="48">
                 <td>Miso Glazed Black Cod</td>
                 <td>$48</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
               </tr>
-              <tr>
+        
+              <tr data-name="Seared Duck Breast" data-price="52">
                 <td>Seared Duck Breast</td>
                 <td>$52</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
               </tr>
-              <tr>
+        
+              <tr data-name="Wild Mushroom Risotto" data-price="44">
                 <td>Wild Mushroom Risotto</td>
                 <td>$44</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
               </tr>
-              <tr>
+        
+              <tr data-name="Wine Pairing" data-price="65">
                 <td>Wine Pairing</td>
                 <td>$65</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
+              </tr>
+
+              <tr data-name="Ham Burger" data-price="25">
+                <td>Ham Burger</td>
+                <td>$25</td>
+                <td><button class="add-to-cart">Add to Cart</button></td>
               </tr>
             </table>
           </section>
 
           <!--Cart Section-->
-          <section class="cart">
-            <h2> Your Cart</h2>
-            <ul id="cart-items"></ul>
-            <p id="cart-total">Total: $0</p>
-            <button id="clear-cart">Clear Cart</button>
-          </section>
-
-          <script src="js/cart.js"></script>
+          <div id="cart-modal" class="cart-modal">
+            <div class="cart-content">
+              <span class="close-cart">&times;</span>
+              <h2>Your Cart</h2>
+              <ul id="cart-items"></ul>
+              <p id="cart-total">Total: $0</p>
+              <button id="clear-cart">Clear Cart</button>
+            </div>
+          </div>
+          
           <footer>
             <p> Follow us:
                 <a href="https://www.facebook.com" target="_blank">Facebook</a>
@@ -70,6 +100,14 @@
             </p>
             <p>Business Hours: Mon-Sun 10am - 10pm</p>
           </footer>
-          
+
+          <script>
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            hamburger.addEventListener('click', () => {
+              navLinks.classList.toggle('active');
+            })
+          </script>
+          <script src="js/cart.js"></script>
     </body>
 </html>
